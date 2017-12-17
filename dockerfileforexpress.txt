@@ -1,0 +1,28 @@
+################################################
+#### installing express.js using dockerfile
+##### base image from apline
+################################################
+
+
+
+FROM apline:3.1
+
+MAINTAINER Morderngeek
+
+#creating a directory
+RUN mkdir -p /usr/src/app
+
+#specifying directory
+WORKDIR /usr/src/app
+
+# mirror into image
+COPY package.json /usr/src/app
+
+#install
+RUN npm install
+
+# 
+COPY . /usr/src/app
+
+EXPOSE 3000
+CMD ["npm", "start"]
