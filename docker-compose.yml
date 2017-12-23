@@ -16,7 +16,7 @@ services:
     command: npm start
 
   mongodb:
-    image: 3.4.10
+    image: 3.4.4
     container_name: dmongo
     ports:
       - "27017:27017"
