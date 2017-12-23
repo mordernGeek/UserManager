@@ -1,0 +1,22 @@
+services:
+  express:
+     image: node:3.1-alpine
+     container_name: expresso
+     ports:
+         - 3000:3000
+     volumes:
+         - . :/test
+     environment:
+         - DB_URL= mongodb://john:doe@localhost:27017/dmongo'
+         - PORT= 3000
+     env_file:
+         - my.env
+     links:
+         - mongodb
+     command: npm start
+
+   mongodb:
+      image:3.4.10
+      container_name: dmongo
+      ports:
+         - 27017:27017
