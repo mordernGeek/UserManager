@@ -19,5 +19,7 @@ services:
   mongodb:
     image: 3.4.4
     container_name: dmongo
+    environment:
+      spring.data.mongodb.database: dmongo
     ports:
       - "27017:27017"
