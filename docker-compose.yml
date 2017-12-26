@@ -1,12 +1,10 @@
 version: '3'
 services:
-  express:
-    image: node:latest
+  app:
     container_name: expresso
+    build: .
     ports:
       - "3000:3000"
-    volumes:
-      - . :/test
     environment:
       - DB_URL= mongodb://john:doe@localhost:27017/dmongo'
       - PORT= 3000
@@ -14,11 +12,12 @@ services:
       - my.env
     links:
       - mongodb
-    command: npm start
 
   mongodb:
     image: mongo:latest
     container_name: dmongo
+    volumes:
+      - ./data:/data/db
     environment:
       spring.data.mongodb.database: dmongo
     ports:
