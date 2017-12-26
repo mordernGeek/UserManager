@@ -1,0 +1,3 @@
+Please ensure you have docker installed on your system
+check if you have docker-compose installed with docker-compose -v
+otherwise install with the following command
