@@ -1,3 +1,14 @@
 Please ensure you have docker installed on your system
 check if you have docker-compose installed with docker-compose -v
-otherwise install with the following command
+otherwise install on your terminal with the following command - curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+set permissions with  chmod +x /usr/local/bin/docker-compose
+You may also need to confirm you have node installed incase you don't with this command node -v
+if absent, use sudo apt-get install node // this will install node and npm 
+Navigate to your preferred directory on the terminal and clone the project from https://github.com/mordernGeek/UserManager
+move to UserManager folder - cd UserManager from the terminal 
+type the following command
+docker-compose up // this will automatically create 2 containers dmongo and expresso from the compose file and the dockerfile in this directory
+and link them up.
+We are up!
+
+
