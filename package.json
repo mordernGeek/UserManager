@@ -24,13 +24,16 @@
   "directories": {
     "test": "tests"
   },
-  "devDependencies": {},
+  "devDependencies": {
+  "express": "^4.15.5",
+  "node": "^4..2.6"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andela-bolajide/UserManager.git"
+    "url": "git+https://github.com/mordernGeek/UserManager.git"
   },
   "bugs": {
-    "url": "https://github.com/andela-bolajide/UserManager/issues"
+    "url": "https://github.com/mordernGeek/UserManager/issues"
   },
-  "homepage": "https://github.com/andela-bolajide/UserManager#readme"
+  "homepage": "https://github.com/mordernGeek/UserManager#readme"
 }
